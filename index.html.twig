@@ -1,0 +1,497 @@
+{% extends 'Web/layout.html.twig' %}
+
+{% block body %}
+
+<section class="hero hero_bg">
+      <div class="container">
+        <div class="hero__wrapper">
+
+          <div class="hero__bottom">
+            <a class="hero__play js-hero__play ga_play" href="#" data-window="popup_0"></a>
+            <div class="hero__lead">Тимати и&#160;Бабкина объединяются, <br>чтобы выпустить совместный эксклюзив! <br>Тебе лишь остается выбрать какой?</div><a class="button js-scroll ga_choose" href="#choose"><span>Выбрать</span></a>
+          </div>
+		  
+		  
+			<div class="animation_container">
+				<div id="animation_container" class="animation_container_inside">
+				<canvas id="canvas" width="730" height="920" style="position: absolute; display: block; background-color:rgba(255, 255, 255, 0.00);"></canvas>
+				<div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; width:730px; height:920px; position: absolute; left: 0px; top: 0px; display: block;">
+				</div>
+				</div>
+			</div>
+			
+			<div class="mob__text"><img src="/img/bgm_txt.png"></div>
+
+        </div>
+      </div>
+    </section>
+	
+
+	
+	
+    <section class="about">
+      <div class="container">
+        <div class="about__wrapper">
+          <h2 class="about__title">Коротко об&#160;акции</h2>
+        </div>
+        <div class="about__wrapper">
+          <div class="about__col stories__col ready">
+
+            <div class="about__slider js-swipe">
+
+              <div class="about__slider__wrapper">
+
+                    <div class="stories__btn">
+
+                        <a class="hero__play js_play_story"></a>
+
+                    </div>
+
+                    <div class="pause__btn js_pause_story">
+
+                    </div>
+
+                <div class="stories__frame  ">
+
+                        <div class="stories__progress">
+                             <div class="stories__progress_item vid1 " ><div class="progress_before vid1"></div></div>
+                             <div class="stories__progress_item vid2"><div class="progress_before vid2"></div></div>
+                             <div class="stories__progress_item vid3"><div class="progress_before vid3"></div></div>
+                             <div class="stories__progress_item vid4"><div class="progress_before vid4"></div></div>
+                             <div class="stories__progress_item vid5"><div class="progress_before vid5"></div></div>
+
+                       </div>
+
+                  <div class="stories_container">
+
+                      <div class="stories_item vid1 active">
+                        <div class="stories__user">
+                          <div class="stories__user-photo"></div>
+                          <div class="stories__user-name">Timatiofficial</div>
+                        </div>
+
+                         <div class="stories__video vid1"><video width="100%"  playsinline="" preload="auto" > <source src="/media/IMG_4627.mov" type="video/mp4"> </video></div>
+
+                      </div>
+
+                      <div class="stories_item vid2">
+                        <div class="stories__user">
+                          <div class="stories__user-photo"></div>
+                          <div class="stories__user-name">Timatiofficial</div>
+                        </div>
+
+                        <div class="stories__video vid2"><video width="100%"  playsinline="" preload="auto" > <source src="/media/IMG_4628.mov" type="video/mp4"> </video></div>
+
+                      </div>
+
+                     <div class="stories_item vid3" >
+                        <div class="stories__user">
+                          <div class="stories__user-photo"></div>
+                          <div class="stories__user-name">Timatiofficial</div>
+                        </div>
+
+                        <div class="stories__video vid3"><video width="100%"  playsinline="" preload="auto" > <source src="/media/IMG_4629.mov" type="video/mp4"> </video></div>
+
+                      </div>
+
+                     <div class="stories_item vid4" >
+                        <div class="stories__user">
+                          <div class="stories__user-photo"></div>
+                          <div class="stories__user-name">Timatiofficial</div>
+                        </div>
+
+                        <div class="stories__video vid4"><video width="100%"  playsinline="" preload="auto" > <source src="/media/IMG_4628.mov" type="video/mp4"> </video></div>
+
+                      </div>
+                     <div class="stories_item vid5" >
+                        <div class="stories__user">
+                          <div class="stories__user-photo"></div>
+                          <div class="stories__user-name">Timatiofficial</div>
+                        </div>
+
+                        <div class="stories__video vid5"><video width="100%"  playsinline="" preload="auto" > <source src="/media/IMG_4627.mov" type="video/mp4"> </video></div>
+
+                      </div>
+
+                  </div>
+                </div>
+              </div>
+              <div class="about__slider-arrow about__slider-arrow--prev js_sl_prev" id="prev" data-story="0"></div>
+              <div class="about__slider-arrow about__slider-arrow--next js_sl_next" id="next" data-story="1"></div>
+
+            </div>
+          </div>
+          <div class="about__col about__col_m">
+            <div class="about__list">
+              <div class="about__list-item">
+                <div class="about__list-index">1</div>
+                <div class="about__list-text">
+
+                Тимати и&#160;Надежда Бабкина запускают совместный эксклюзив в&#160;магазинах &#171;Пятёрочка&#187;</div>
+              </div>
+              <div class="about__list-item">
+                <div class="about__list-index">2</div>
+                <div class="about__list-text">Вы&#160;голосуете, и&#160;выбираете какой из&#160;проектов будет воплощен артистами</div>
+              </div>
+              <div class="about__list-item">
+                <div class="about__list-index">3</div>
+                <div class="about__list-text">Делитесь результатом голосования в&#160;социальных сетях, помогая героям с&#160;выбором будущего релиза</div>
+              </div>
+              <div class="about__list-item">
+                <div class="about__list-index">4</div>
+                <div class="about__list-text">Отслеживайте статус продаж, когда весь товар будет распродан, артисты выпустят совместный эксклюзив</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about__col_mmm"><a class="js-scroll" href="#choose"><svg width="49" height="49" viewBox="0 0 49 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M24.5 49C38.031 49 49 38.031 49 24.5C49 10.969 38.031 0 24.5 0C10.969 0 0 10.969 0 24.5C0 38.031 10.969 49 24.5 49ZM14.6596 20L24.5 29.0877L34.3404 20L37 22.4561L24.5 34L12 22.4561L14.6596 20Z" fill="#D7C08A"/>
+</svg>
+</a></div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="status">
+      <div class="container">
+        <div class="status__wrapper">
+          <h2 class="status__title">Статус продаж эксклюзива</h2>
+          <div class="status__lead">До&#160;выхода проекта&#160;<br>осталось купить</div>
+          <div class="status__arrow" id="status_arrow" data-count="0"></div>
+          <div class="status__count">5&#160;млн</div>
+        </div>
+      </div>
+    </section>
+    <section class="vote" id="choose">
+      <div class="container">
+        <div class="vote__wrapper">
+          <h2 class="vote__title">Голосуй за&#160;народный эксклюзив</h2>
+        </div>
+
+        <div class="vote__wrapper">
+
+			<!-- для запрета действий с плиткой добавьте к ней класс vote__item_disabled , см. пример на пятой плитке. Описания для всплывающего окна задаются тут же. Класс для аналитики и номер плитки задаются фронтом (см. дата-параметры у плитки)-->
+			
+              <div class="vote__item js_vote_btn" data-window="popup_1" data-id="1" data-img="/img/choose-1.png" data-text="Надежда Бабкина и Тимати поменяются стилями. Эдакий мэшап, где совмещаются русские народные мотивы с современным хип-хопом" data-header="Народный хип-хоп мульт-баттл"  data-vote="1">
+                <div class="vote__item-image img_shield"><img src="/img/choose-1.png" ></div>
+                <div class="vote__item-title">Народный хип-хоп мульт-баттл</div>
+              </div>
+              <div class="vote__item js_vote_btn" data-window="popup_1" data-id="2" data-img="/img/choose-2.png" data-text="Текст" data-header="Дэнс-Баттл в&nbsp;Пятёрочке"  data-vote="2">
+                <div class="vote__item-image img_shield"><img src="/img/choose-2.png" ></div>
+                <div class="vote__item-title">Дэнс-Баттл в&#160;Пятёрочке</div>
+              </div>
+              <div class="vote__item js_vote_btn" data-window="popup_1" data-id="3" data-img="/img/choose-3.png" data-text="Текст" data-header="Рэп Надежды"  data-vote="3">
+                <div class="vote__item-image img_shield"><img src="/img/choose-3.png" ></div>
+                <div class="vote__item-title">Рэп Надежды</div>
+              </div>
+              <div class="vote__item js_vote_btn" data-window="popup_1" data-id="4" data-img="/img/choose-4.png" data-text="Текст" data-header="Mash-up"  data-vote="4">
+                <div class="vote__item-image img_shield"><img src="/img/choose-4.png" ></div>
+                <div class="vote__item-title">Mash-up</div>
+              </div>
+              <div class="vote__item js_vote_btn" data-window="popup_1" data-id="5" data-img="/img/choose-5.png" data-text="Текст" data-header="Короткометражный мультфильм"  data-vote="5">
+                <div class="vote__item-image img_shield"><img src="/img/choose-5.png"></div>
+                <div class="vote__item-title">Короткометражный мультфильм</div>
+              </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="boost">
+
+            <div class="boost_mob img_shield"><img class="" src="/img/footer_m1.jpg"></div>
+
+      <div class="container">
+
+        <div class="boost__wrapper">
+          <div class="boost__top"><img class="boost__title" src="/img/svg/boost__title.svg"></div>
+          <div class="boost__middle">
+            <div class="boost__lead">При покупке любых Pepsi + Lay&#8217;s в&#160;одном чеке</div>
+
+            <div class="boost__media">
+			
+			 <div class="boost__card img_shield"><img class="boost__card_img" src="/img/boost__card.png" ></div>
+			 <div class="boost__logos img_shield"><img class="boost__logos_img" src="/img/boost__logos.png"></div>
+			
+			
+			</div>
+          </div>
+
+          <div class="boost_mob img_shield"><img class="" src="/img/footer_m2.jpg"></div>
+
+          <div class="boost__bottom">
+            <div class="boost__rules">Организатор акции ООО&#160;&#171;Агроторг&#187;. С&#160;02.06.2020 по&#160;31.07.2020 за&#160;покупку с&#160;Выручай-картой в&#160;магазинах &#171;Пятёрочка&#187; напитка Pepsi (любой объем и&#160;вкус Pepsi) вместе с&#160;чипсами Lays (любой вес и&#160;вкус Lays) в&#160;одном чеке, покупатель получает удвоенные баллы за&#160;этот товар. Информацию об&#160;ассортименте (разновидностях вкусов) товаров, участвующих в&#160;акции, уточняйте в&#160;магазине. Организатор акции оставляет за&#160;собой право приостановить или продлить действие данной акции в&#160;любой момент, без объяснения причин. Акция действует пока товар есть в&#160;наличии. Подробности об&#160;организаторе акции, правилах проведения, территории уточняйте по&#160;телефону горячей линии 8-800-555-55-05 и&#160;на&#160;сайте www.5ka.ru. РЕКЛАМА.
+
+            <br>
+            <br>
+            <a href="/rules.pdf" target="_blank" class="ga_rules">Ссылка на&#160;правила</a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+     <section class="vote__modals">
+
+        <!-- popup_video popup_0 -->
+
+          <div class="popup  popup_0 popup_video">
+            <div class="popup_overlay" tabindex="-1" >
+                 <div class="popup_inner">
+                        <div class="popup_body" >
+                            <div class="popup_nav">
+                                <div class="popup_back js_back_tab "><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.29289 11.2929C2.90237 11.6834 2.90237 12.3166 3.29289 12.7071L9.65685 19.0711C10.0474 19.4616 10.6805 19.4616 11.0711 19.0711C11.4616 18.6805 11.4616 18.0474 11.0711 17.6569L5.41421 12L11.0711 6.34315C11.4616 5.95262 11.4616 5.31946 11.0711 4.92893C10.6805 4.53841 10.0474 4.53841 9.65685 4.92893L3.29289 11.2929ZM22 11L4 11V13L22 13V11Z" fill="#EE312F"/></svg> <span>Назад</span></div>
+                                <div class="popup_close js-closepopup img_shield"><svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.99989 31.7485L31.7486 6.9998L34.2235 9.47467L9.47477 34.2234L6.99989 31.7485Z" fill="#EE312F"/><path d="M34.2238 31.7485L9.47502 6.9998L7.00014 9.47467L31.7489 34.2234L34.2238 31.7485Z" fill="#EE312F"/></svg></div>
+                            </div>
+                            <div class="popup_content" >
+                                <div class="video_section_counter video_section_counter_sm"><video width="100%"  playsinline="" preload="auto" loop=""> <source src="/img/video52.mp4" type="video/mp4"> </video></div>
+                        </div>
+                    </div>
+              </div>
+            </div>
+          </div>
+
+        <!-- popup_1  -->
+
+        <div class="popup popup_1"><!-- чтобы показать поп-ап при загрузке странице, добавим класс OPEN (и для блока скролла страницы на body body__menu_open ). Так-же,для показа кнопки назад, добавим класс popup_1_back  /  popup_1_sended -->
+            <div class="popup_overlay" tabindex="-1" >
+              <div class="popup_inner">
+                    <div class="popup_body" >
+                        <div class="popup_nav">
+                            <div class="popup_back js_back_tab "><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.29289 11.2929C2.90237 11.6834 2.90237 12.3166 3.29289 12.7071L9.65685 19.0711C10.0474 19.4616 10.6805 19.4616 11.0711 19.0711C11.4616 18.6805 11.4616 18.0474 11.0711 17.6569L5.41421 12L11.0711 6.34315C11.4616 5.95262 11.4616 5.31946 11.0711 4.92893C10.6805 4.53841 10.0474 4.53841 9.65685 4.92893L3.29289 11.2929ZM22 11L4 11V13L22 13V11Z" fill="#EE312F"/></svg> <span>Назад</span></div>
+                            <div class="popup_close js-closepopup img_shield"><svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.99989 31.7485L31.7486 6.9998L34.2235 9.47467L9.47477 34.2234L6.99989 31.7485Z" fill="#EE312F"/><path d="M34.2238 31.7485L9.47502 6.9998L7.00014 9.47467L31.7489 34.2234L34.2238 31.7485Z" fill="#EE312F"/></svg></div>
+                        </div>
+                        <div class="popup_content" >
+                            <div class="popup_wrapper" >
+
+                                  <!-- первое состояние попапа. Все состояния переключаются просто добавлением класса none, который скрывает блок. Можете пользоваться:) -->
+
+                                 <div class="popup_tab variant_flex   "><!-- optional class none -->
+                                      <div class="variant_flex_image js-popup_1_img img_shield">
+                                            <img src="/img/choose-1.png">
+                                      </div>
+                                      <div class="variant_flex_txt">
+
+                                        <h3 class="popup_title js-popup_1_title">Народный хип-хоп<br>мульт-баттл</h3>
+
+                                        <p class="js-popup_1_txt">Надежда Бабкина и&#160;Тимати поменяются стилями. Эдакий мэшап, где совмещаются русские народные мотивы с&#160;современным хип-хопом.</p>
+
+                                        <div class="pop_button"><a class="button js_vote_popup_tab_ ga_golos_1 js-ga_golos to-vote" data-vote="1"><span>Голосовать</span></a></div><!-- на js_vote_popup_tab нужно повесить отправку варианта голосования. Пока же он просто переключает следующее состояние попапа (popup_tab) . Класс ga_golos_1 - для аналитики. Он меняется автоматически при клике на соотв. плитку.  -->
+
+                                      </div>
+                                  </div>
+
+                                  <!-- второе состояние попапа  -->
+
+                                  <div class=" popup_tab steps_flex none"><!-- optional class none -->
+                                     <div class="steps_flex_col">
+
+                                        <p class="thanks_pc">Спасибо! Твой голос учтен.</p>
+
+                                         <div class="black_svyaz">
+
+                                            <h3 class="popup_title">Оставайся на&#160;связи</h3>
+
+                                            <p>Чтобы не&#160;пропустить выход эксклюзива от&#160;артистов, оставь свою электронную почту. Мы&#160;сразу сообщим тебе, когда все случится! </p>
+
+                                            <div class="pop_button"><a class="button js_podpiska ga_podpiska"><span>Подписаться</span></a></div><!-- на js_vote нужно повесить отправку варианта голосования. Пока же он просто показывает следующее окно.   -->
+                                       </div>
+
+                                     </div>
+                                     <div class="steps_flex_col">
+
+                                            <p class="thanks_mob">Спасибо! Твой голос учтен.</p>
+
+                                            <div class="mask_popup_img img_shield"><img src="/img/svg/mask_u.svg"></div>
+
+                                            <div class="popup_mask_step popup_mask_step_1"><!-- optional class none -->
+
+                                                <h3 class="popup_title">Разблокируй эксклюзивную инстаграм маску</h3>
+
+                                                <p>Поделись результатом в&#160;социальных сетях, чтобы получить доступ к&#160;специальной инстаграм-маске</p>
+
+                                                <div class="popup_mask_step_social">
+
+                                                    <a href="" target="_blank" class="button button_soc js_popup_mask_step_ ga_vk to-share-vk"><img src="/img/svg/vk.svg"></a><!-- на js_popup_mask_step нужно повесить механику share. Пока же он просто вешает класс none на popup_mask_step_1 и убрирает с 2 .   -->
+                                                    <a href="" target="_blank" class="button button_soc js_popup_mask_step_ ga_fb to-share-fb"><img src="/img/svg/facebook.svg"></a>
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="popup_mask_step none popup_mask_step_2"><!-- optional class none -->
+
+                                                <h3 class="popup_title">Твоя инстаграм маска</h3>
+
+                                                <p class="onlypc">Сканируй QR-код</p>
+
+                                                <div class="qrcode img_shield"><img src="/img/qr.png"></div>
+                                                <div class="pop_button pop_button_mob "><a class="button ga_getmask" href=""><span>Получить маску</span></a></div>
+
+                                            </div>
+
+                                    </div>
+
+                                  </div>
+
+                                <!-- третье состояние попапа  -->
+
+                                 <div class="popup_tab form_flex none "><!-- optional class none -->
+
+                                     <div class="form_flex_col">
+                                        <h3 class="popup_title">Оставайся на&#160;связи</h3>
+
+                                            <form id="form">
+
+                                                <div class="form_item "><!-- form_item_error form_item_has_value form_item_focus . Если при загрузке страницы в поле есть значение, лучше поставить класс form_item_has_value-->
+                                                    <label>E-mail</label>
+                                                    <div class="form_item_wrapper">
+                                                        <input type="text" class="jsfocus js-email" name="email">
+                                                        <div class="input-clear "></div>
+                                                    </div>
+                                                    <div class="form_item_error_mes">Необходимо заполнить</div>
+                                                    <div class="form_advice"></div>
+                                                </div>
+
+                                                <div class="form_item"><!-- form_item_error form_item_has_value form_item_focus . Если при загрузке страницы в поле есть значение, лучше поставить класс form_item_has_value-->
+                                                    <label>Имя</label>
+                                                    <div class="form_item_wrapper">
+                                                        <input type="text"  class="jsfocus js-name" name="name">
+                                                        <div class="input-clear"></div>
+                                                    </div>
+                                                    <div class="form_item_error_mes">Необходимо заполнить</div>
+                                                    <div class="form_advice"></div>
+                                                </div>
+
+                                            <div class="form_item form_item_checkbox_radio  "><!-- form_item_error form_item_checkbox_radio_inline -->
+                                                <label>
+                                                    <input type="checkbox" class="js-checkme" >
+                                                    <span></span>
+                                                    <div class="checkbox_label"><p>Согласен с&#160;условиями <br><a href="/agreement.pdf" target="_blank">пользовательского соглашения</a></p></div>
+                                                </label>
+                                                <div class="form_item_error_mes">Необходимо дать согласие</div>
+
+                                            </div>
+
+                                        </form>
+
+                                     </div>
+                                     <div class="form_flex_col">
+
+                                     <div class="capcha_counter">
+                                     	<div class="captcha g-recaptcha" data-sitekey="6Lfm2fwUAAAAAO7J6qFhtAmKUe_4kStxSAXSNxzz"></div>
+                                     </div>
+
+                                     <div class="pop_button"><a class="button js_form_subm ga_podpiska" data-url="url_ajax" data-form_id="form" ><span>Подписаться</span></a></div><!-- на js_vote нужно повесить отправку варианта голосования. Пока же он просто показывает следующее окно.   -->
+
+                                     </div>
+
+                                </div>
+
+                                <!-- четвертое состояние попапа (при показе на попап вешаем дополнительно popup_1_sended, он ставит бекграунд)  -->
+
+                                 <div class="popup_tab second_flex form_is_sended none"><!-- optional class none -->
+
+                                     <div class="second_flex_col">
+
+                                    </div>
+                                     <div class="second_flex_col">
+
+                                        <div class="mask_popup_img mask_popup_img_mob img_shield"><img src="/img/svg/mail_2.svg"></div>
+
+                                        <h3 class="popup_title">Подтверди адрес</h3>
+
+                                        <p>Мы&#160;отправили тебе письмо на&#160;почту для подтверждения. Пройди по&#160;ссылке и&#160;заверши подписку</p>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+              </div>
+            </div>
+          </div>
+
+        <!-- popup_2  -->
+
+        <div class="popup  popup_2 popup_1_sended"><!-- чтобы показать поп-ап при загрузке странице, добавим класс OPEN (и для блока скролла страницы на body body__menu_open ). Так-же,для показа кнопки назад, добавим класс popup_1_back  /  popup_1_sended -->
+            <div class="popup_overlay" tabindex="-1" >
+              <div class="popup_inner">
+                    <div class="popup_body" >
+                        <div class="popup_nav">
+                            <div class="popup_back js_back_tab "><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.29289 11.2929C2.90237 11.6834 2.90237 12.3166 3.29289 12.7071L9.65685 19.0711C10.0474 19.4616 10.6805 19.4616 11.0711 19.0711C11.4616 18.6805 11.4616 18.0474 11.0711 17.6569L5.41421 12L11.0711 6.34315C11.4616 5.95262 11.4616 5.31946 11.0711 4.92893C10.6805 4.53841 10.0474 4.53841 9.65685 4.92893L3.29289 11.2929ZM22 11L4 11V13L22 13V11Z" fill="#EE312F"/></svg> <span>Назад</span></div>
+                            <div class="popup_close js-closepopup img_shield"><svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6.99989 31.7485L31.7486 6.9998L34.2235 9.47467L9.47477 34.2234L6.99989 31.7485Z" fill="#EE312F"/><path d="M34.2238 31.7485L9.47502 6.9998L7.00014 9.47467L31.7489 34.2234L34.2238 31.7485Z" fill="#EE312F"/></svg></div>
+                        </div>
+                        <div class="popup_content" >
+                            <div class="popup_wrapper" >
+
+                                  <!-- второе состояние попапа  -->
+
+                                  <div class="steps_flex "><!-- optional class none -->
+                                     <div class="steps_flex_col">
+
+                                     </div>
+                                     <div class="steps_flex_col">
+
+                                            <div class="popup_mask_step none popup_mask_step_0"><!-- optional class none -->
+
+                                                <div class="mask_popup_img mask_popup_img_mob img_shield"><img src="/img/svg/check2.svg"></div>
+
+                                                <h3 class="popup_title">Подписка подтверждена!</h3>
+
+                                                <p>Мы&#160;сообщим тебе сразу, как только выйдет финальный эксклюзив от&#160;артистов</p>
+
+                                                <div class=""><a class="button js_mask_popup2_ ga_getmask to-close-success-subscribe"><span>Получить маску</span></a></div>
+
+                                            </div>
+
+                                            <div class="popup_mask_step none popup_mask_step_1"><!-- optional class none -->
+
+                                                <div class="mask_popup_img img_shield"><img src="/img/svg/mask_u.svg"></div>
+
+                                                <h3 class="popup_title">Разблокируй эксклюзивную инстаграм маску</h3>
+
+                                                <p>Поделись результатом в&#160;социальных сетях, чтобы получить доступ к&#160;специальной инстаграм-маске</p>
+
+                                                <div class="popup_mask_step_social">
+
+                                                    <a href="" target="_blank" class="button button_soc js_popup_mask_step_ ga_vk to-share-vk"><img src="/img/svg/vk.svg"></a><!-- на js_popup_mask_step нужно повесить механику share. Пока же он просто вешает класс none на popup_mask_step_1 и убрирает с 2 .   -->
+                                                    <a href="" target="_blank" class="button button_soc js_popup_mask_step_ ga_fb to-share-fb"><img src="/img/svg/facebook.svg"></a>
+
+                                                </div>
+
+                                            </div>
+
+                                            <div class="popup_mask_step none popup_mask_step_2"><!-- optional class none -->
+
+                                                <div class="mask_popup_img img_shield"><img src="/img/svg/mask_u.svg"></div>
+
+                                                <h3 class="popup_title">Твоя инстаграм маска</h3>
+
+                                                <p class="onlypc">Сканируй QR-код</p>
+
+                                                <div class="qrcode img_shield"><img src="/img/qr.png"></div>
+                                                <div class="pop_button pop_button_mob "><a class="button ga_getmask" href=""><span>Получить маску</span></a></div>
+
+                                            </div>
+
+                                    </div>
+
+                                  </div>
+
+                            </div>
+                        </div>
+                    </div>
+              </div>
+            </div>
+          </div>
+
+        </section>
+		<script src="/js/anim.js"></script>
+		<script src="/js/vendor.min.js?v=94644"></script>
+		<script src="/js/main.min.js?v=6664"></script>
+
+{% endblock %}
